@@ -4,8 +4,4 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <include file="/db/changelog/001/create-oauth_client_details-table.sql"/>
-    <include file="/db/changelog/001/create-ebuser-table.sql"/>
-    <include file="/db/changelog/002/insert-oauth_client_details-data.sql"/>
-    <include file="/db/changelog/002/insert-ebuser-data.sql"/>
 </databaseChangeLog>
