@@ -68,7 +68,7 @@ public class WebControllerTest {
     @Test
     public void givenAuthRequestOnProtectedEndpoint_shouldSucceedWith200() throws Exception {
         ResponseEntity<String> result = template.withBasicAuth("user", "password")
-                .getForEntity("/private/hello", String.class);
+                .getForEntity("/private", String.class);
         assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 }
