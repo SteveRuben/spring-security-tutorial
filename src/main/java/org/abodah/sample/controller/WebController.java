@@ -5,6 +5,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,6 +22,12 @@ public class WebController {
     @ResponseBody
     public String restricted() {
         return "You found the secret lair!";
+    }
+
+    @RequestMapping("/private/{hello}")
+    @ResponseBody
+    public String privateHello(@PathVariable("{hello}") String hello) {
+        return hello + " found the secret lair!";
     }
 
     @RequestMapping("/me")
